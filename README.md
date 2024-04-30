@@ -2,7 +2,7 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-### Live Site URL: [Japanese-Language-Practice](https://vercel.com/moehtetmyint99s-projects/language-practice/9kUecASQybzMcXmzbZ7gipSw3f49)
+### Live Site URL: [Japanese-Language-Practice](https://language-practice-peach.vercel.app/)
 
 ### Recommended IDE Setup
 
