@@ -3,7 +3,7 @@ import Header from '@/components/Header.vue'
 </script>
 
 <template>
-  <div class="">
+  <div class="mt-10 lg:mt-0">
     <Header class="mb-8">About this page</Header>
     <div class="">
       <h1 class="text-lg">

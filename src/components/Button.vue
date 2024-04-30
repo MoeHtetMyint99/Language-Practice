@@ -15,7 +15,7 @@ const colorVariants = computed(() => ({
 
 <template>
   <button
-    :class="`text-white focus:ring-4-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none ${colorVariants[color]}`"
+    :class="`text-white focus:ring-4-300 font-medium rounded-lg text-sm p-2 lg:px-4 lg:py-2.5 focus:outline-none ${colorVariants[color]}`"
   >
     <slot />
   </button>

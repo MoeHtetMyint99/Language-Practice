@@ -74,8 +74,8 @@ function onCheck() {
 </script>
 
 <template>
-  <div class="flex flex-col items-center">
-    <div class="flex items-center gap-8 mb-4">
+  <div class="flex flex-col items-center mt-4 lg:mt-0">
+    <div class="flex items-center justify-center lg:gap-8 gap-4 mb-4 flex-wrap">
       <select v-model="selected" class="border p-2 rounded-md">
         <option>Romanji</option>
         <option value="romanjiCombined">Romanji (Hira + Kata)</option>
@@ -83,8 +83,8 @@ function onCheck() {
         <option>Katakana</option>
         <option value="hiNka">Hiragana + Katakana</option>
       </select>
+      <input v-model="count" type="number" :class="inputText" class="" />
       <Button color="green" @click="onClick">Generate</Button>
-      <input v-model="count" type="number" :class="inputText" class="w-fit max-w-20" />
       <Button color="green" @click="onCheck">Check</Button>
     </div>
     <div
