@@ -5,11 +5,10 @@ import { inputText } from '@/assets/styles'
 import { romanji, hiragana, katakana } from '@/assets/japWords'
 import { computed, ref } from 'vue'
 
-const numLearns = 15
+const numLearns = 25
 const count = ref(10)
 const randArr = ref<number[]>([])
 const selected = ref('hiNka')
-// const checkText = ref('')
 const checked = ref(false)
 
 const text = computed(() => {
@@ -75,7 +74,7 @@ function onCheck() {
 
 <template>
   <div class="flex flex-col items-center mt-4 lg:mt-0">
-    <div class="flex items-center justify-center lg:gap-8 gap-4 mb-4 flex-wrap">
+    <div class="flex items-center justify-evenly gap-2 mb-4 flex-wrap">
       <select v-model="selected" class="border p-2 rounded-md">
         <option>Romanji</option>
         <option value="romanjiCombined">Romanji (Hira + Kata)</option>
@@ -85,13 +84,18 @@ function onCheck() {
       </select>
       <input v-model="count" type="number" :class="inputText" class="" />
       <Button color="green" @click="onClick">Generate</Button>
-      <Button color="green" @click="onCheck">Check</Button>
+      <Button color="green" class="w-[5rem] px-0 flex justify-center" @click="onCheck">{{
+        checked ? 'Uncheck' : 'Check'
+      }}</Button>
     </div>
     <div
       class="border-2 rounded-lg min-h-96 w-full text-green-300 bg-green-950 px-12 py-8 flex flex-col text-lg"
     >
       <div class="">{{ text }}</div>
       <div class="mt-8" v-if="checked">{{ checkText }}</div>
+      <!-- <div>{{ romanji.length }}</div>
+      <div>{{ hiragana.length }}</div>
+      <div>{{ katakana.length }}</div> -->
     </div>
   </div>
 </template>

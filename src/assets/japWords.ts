@@ -13,7 +13,17 @@ export const romanji = [
   'shi',
   'su',
   'se',
-  'so'
+  'so',
+  'ta',
+  'chi',
+  'tsu',
+  'te',
+  'to',
+  'na',
+  'ni',
+  'nu',
+  'ne',
+  'no'
 ]
 
 export const hiragana = [
@@ -31,7 +41,17 @@ export const hiragana = [
   'し',
   'す',
   'せ',
-  'そ'
+  'そ',
+  'た',
+  'ち',
+  'つ',
+  'て',
+  'と',
+  'な',
+  'に',
+  'ぬ',
+  'ね',
+  'の'
 ]
 
 export const katakana = [
@@ -49,5 +69,15 @@ export const katakana = [
   'シ',
   'ス',
   'セ',
-  'ソ'
+  'ソ',
+  'タ',
+  'チ',
+  'ツ',
+  'テ',
+  'ト',
+  'ナ',
+  'ニ',
+  'ヌ',
+  'ネ',
+  'ノ'
 ]
