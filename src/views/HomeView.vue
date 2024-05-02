@@ -42,8 +42,12 @@ const text = computed(() => {
 const checkText = computed(() => {
   if (selected.value === 'hiNka') {
     const arrCheckText = randArr.value.map((value) => {
-      value = value > numLearns ? value - numLearns : value
-      return romanji[value]
+      if (value > numLearns) {
+        value = value - numLearns
+        return romanji[value] + '(k)'
+      } else {
+        return romanji[value]
+      }
     })
     return arrCheckText.join(' ')
   } else {
@@ -74,7 +78,7 @@ function onCheck() {
 
 <template>
   <div class="flex flex-col items-center mt-4 lg:mt-0">
-    <div class="flex items-center justify-evenly gap-2 mb-4 flex-wrap">
+    <div class="flex items-center justify-evenly gap-2 mb-4 flex-wrap text-black">
       <select v-model="selected" class="border p-2 rounded-md">
         <option>Romanji</option>
         <option value="romanjiCombined">Romanji (Hira + Kata)</option>

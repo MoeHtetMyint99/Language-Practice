@@ -12,7 +12,11 @@ import HelloWorld from './components/HelloWorld.vue'
     </nav>
   </header>
 
-  <RouterView />
+  <router-view v-slot="{ Component }">
+    <keep-alive include="HomeView">
+      <component :is="Component" />
+    </keep-alive>
+  </router-view>
 </template>
 
 <style scoped>
