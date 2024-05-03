@@ -23,7 +23,12 @@ export const romanji = [
   'ni',
   'nu',
   'ne',
-  'no'
+  'no',
+  'ha',
+  'hi',
+  'fu',
+  'he',
+  'ho'
 ]
 
 export const hiragana = [
@@ -51,7 +56,12 @@ export const hiragana = [
   'に',
   'ぬ',
   'ね',
-  'の'
+  'の',
+  'は',
+  'ひ',
+  'ふ',
+  'へ',
+  'ほ'
 ]
 
 export const katakana = [
@@ -79,5 +89,10 @@ export const katakana = [
   'ニ',
   'ヌ',
   'ネ',
-  'ノ'
+  'ノ',
+  'ハ',
+  'ヒ',
+  'フ',
+  'ヘ',
+  'ホ'
 ]

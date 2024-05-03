@@ -5,7 +5,7 @@ import { inputText } from '@/assets/styles'
 import { romanji, hiragana, katakana } from '@/assets/japWords'
 import { computed, ref } from 'vue'
 
-const numLearns = 25
+const numLearns = 30
 const count = ref(10)
 const randArr = ref<number[]>([])
 const selected = ref('hiNka')
