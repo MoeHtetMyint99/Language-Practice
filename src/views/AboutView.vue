@@ -8,9 +8,8 @@ import Header from '@/components/Header.vue'
     <div class="">
       <h1 class="text-lg">
         <span class="green">Generate</span> the japanese words randomly by
-        <span class="green">selection</span> and <span class="green">numbers</span> of words to
-        generate, and Practise!
-        <div class="mt-4"><span class="green">Check</span> answer by Romanji.</div>
+        <span class="green">selections</span> and <span class="green">numbers</span> of words to
+        generate. Practise and <span class="green">Check</span> the answers.
       </h1>
     </div>
   </div>

@@ -40,19 +40,43 @@ const text = computed(() => {
 })
 
 const checkText = computed(() => {
-  if (selected.value === 'hiNka') {
-    const arrCheckText = randArr.value.map((value) => {
-      if (value > numLearns) {
-        value = value - numLearns
-        return romanji[value] + '(k)'
-      } else {
-        return romanji[value]
-      }
-    })
-    return arrCheckText.join(' ')
-  } else {
-    const arrCheckText = randArr.value.map((value) => romanji[value])
-    return arrCheckText.join(' ')
+  switch (selected.value) {
+    case 'Romanji': {
+      const arrCheckText = ['H : ']
+        .concat(randArr.value.map((value) => hiragana[value]))
+        .concat('<br>')
+        .concat('K : ')
+        .concat(randArr.value.map((value) => katakana[value]))
+      return arrCheckText.join(' ')
+    }
+
+    case 'romanjiCombined': {
+      const arrCheckText = randArr.value.map((value) => {
+        if (value > numLearns) {
+          return katakana[value - numLearns]
+        } else {
+          return hiragana[value]
+        }
+      })
+      return arrCheckText.join(' ')
+    }
+
+    case 'hiNka': {
+      const arrCheckText = randArr.value.map((value) => {
+        if (value > numLearns) {
+          value = value - numLearns
+          return romanji[value] + '(k)'
+        } else {
+          return romanji[value]
+        }
+      })
+      return arrCheckText.join(' ')
+    }
+
+    default: {
+      const arrCheckText = randArr.value.map((value) => romanji[value])
+      return arrCheckText.join(' ')
+    }
   }
 })
 
@@ -96,7 +120,7 @@ function onCheck() {
       class="border-2 rounded-lg min-h-96 w-full text-green-300 bg-green-950 px-12 py-8 flex flex-col text-lg"
     >
       <div class="">{{ text }}</div>
-      <div class="mt-8" v-if="checked">{{ checkText }}</div>
+      <div class="mt-8" v-if="checked" v-html="checkText"></div>
       <!-- <div>{{ romanji.length }}</div>
       <div>{{ hiragana.length }}</div>
       <div>{{ katakana.length }}</div> -->
