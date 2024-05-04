@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import Button from './components/Button.vue'
 </script>
 
 <template>
@@ -34,7 +35,10 @@ header {
 
 nav {
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
   margin-top: 1rem;
   padding: 1rem 0;
 }
