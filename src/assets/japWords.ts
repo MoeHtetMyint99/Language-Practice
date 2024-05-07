@@ -28,7 +28,23 @@ export const romanji = [
   'hi',
   'fu',
   'he',
-  'ho'
+  'ho',
+  'ma',
+  'mi',
+  'mu',
+  'me',
+  'mo',
+  'ya',
+  'yu',
+  'yo',
+  'ra',
+  'ri',
+  'ru',
+  're',
+  'ro',
+  'wa',
+  'wo',
+  'n'
 ]
 
 export const hiragana = [
@@ -61,7 +77,23 @@ export const hiragana = [
   'ひ',
   'ふ',
   'へ',
-  'ほ'
+  'ほ',
+  'ま',
+  'み',
+  'む',
+  'め',
+  'も',
+  'や',
+  'ゆ',
+  'よ',
+  'ら',
+  'り',
+  'る',
+  'れ',
+  'ろ',
+  'わ',
+  'を',
+  'ん'
 ]
 
 export const katakana = [
@@ -94,7 +126,23 @@ export const katakana = [
   'ヒ',
   'フ',
   'ヘ',
-  'ホ'
+  'ホ',
+  'マ',
+  'ミ',
+  'ム',
+  'メ',
+  'モ',
+  'ヤ',
+  'ユ',
+  'ヨ',
+  'ラ',
+  'リ',
+  'ル',
+  'レ',
+  'ロ',
+  'ワ',
+  'ヲ',
+  'ン'
 ]
 
 export const dakuonR = [

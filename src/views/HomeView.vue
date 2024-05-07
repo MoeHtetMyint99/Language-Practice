@@ -113,7 +113,7 @@ function onCheck() {
 <template>
   <div class="flex flex-col items-center mt-4 lg:mt-0">
     <div class="flex items-center justify-evenly gap-2 mb-4 flex-wrap text-black">
-      <select v-model="selected" class="border p-2 rounded-md">
+      <select v-model="selected" class="border p-2 rounded-md" @change="reset">
         <option>Romanji</option>
         <option value="romanjiCombined">Romanji (Hira + Kata)</option>
         <option>Hiragana</option>
@@ -132,9 +132,9 @@ function onCheck() {
     >
       <div class="">{{ text }}</div>
       <div class="mt-8" v-if="checked" v-html="checkText"></div>
-      <!-- <div>{{ dakuonR.length }}</div>
-      <div>{{ dakuonH.length }}</div>
-      <div>{{ dakuonK.length }}</div>
+      <!-- <div>{{ roman.length }}</div>
+      <div>{{ hira.length }}</div>
+      <div>{{ kata.length }}</div>
       <div>{{ ['5'].constructor === Array }}</div>
       <div>{{ typeof '5' }}</div> -->
     </div>
