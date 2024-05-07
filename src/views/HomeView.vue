@@ -58,7 +58,7 @@ const checkText = computed(() => {
 
     case 'romanjiCombined': {
       const arrCheckText = randArr.value.map((value) => {
-        if (value > wordsCount.value) {
+        if (value >= wordsCount.value) {
           return kata.value[value - wordsCount.value]
         } else {
           return hira.value[value]
@@ -69,7 +69,7 @@ const checkText = computed(() => {
 
     case 'hiNka': {
       const arrCheckText = randArr.value.map((value) => {
-        if (value > wordsCount.value) {
+        if (value >= wordsCount.value) {
           value = value - wordsCount.value
           return roman.value[value] + '(k)'
         } else {
